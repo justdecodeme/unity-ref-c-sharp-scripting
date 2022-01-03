@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class MoveToTarget : MonoBehaviour
 {
-    void Start()
+    [SerializeField] private Transform targetTransform;
+    public float moveSpeed = 10f;
+
+    void Update()
     {
-        Debug . Log ("Log to the console");
-        Debug. LogWarning ("Warning to the console");
-        Debug. LogError("Error to the console");
+        float dist = Vector3.Distance(targetTransform.position, transform.position);
+        if (dist > .001f)
+        {
+            Vector3 moveDir = (targetTransform.position - transform.position).normalized;
+            transform.position += moveDir * moveSpeed * Time.deltaTime;
+        }
+
+        print("Distance to other: " + dist);
     }
 
 }
