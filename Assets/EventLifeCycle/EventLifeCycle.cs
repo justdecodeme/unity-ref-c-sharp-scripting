@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventLoop : MonoBehaviour
+public class EventLifeCycle : MonoBehaviour
 {
     /* run on when script enabled */
     void OnEnable()

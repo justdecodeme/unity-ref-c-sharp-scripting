@@ -4,24 +4,41 @@ using UnityEngine;
 
 public class FindGameObject : MonoBehaviour
 {
-    public GameObject target1;
-    private GameObject target2;
-    private GameObject target3;
+    public GameObject go1;
+
+    private GameObject go2;
+    private GameObject go3;
+    private GameObject go4;
+    private GameObject[] go5;
 
     void Start()
     {
-        /* target1 is set in the editor */
+        /* go1 is set in the EDITOR */
 
-        /* target2 is set based on the GameObject name */
-        target2 = GameObject.Find("Enemy");
+        /* go2 is set based on the GameObject NAME */
+        go2 = GameObject.Find("Enemy");
+        // Debug.Log(go2.transform.childCount); // not working
+        go3 = GameObject.Find("Parent/Child");
 
-        // target3 is set based on the GameObject tag
-        target3 = GameObject.FindWithTag("Player");
-        
-        // make the gameObjects inactive
-        target1.SetActive(false);
-        target2.SetActive(false);
-        target3. SetActive(false);
+        /* go3 is set based on the GameObject TAG */
+        go4 = GameObject.FindWithTag("Player");
+        go5 = GameObject.FindGameObjectsWithTag("Trap");
+
+        /* ----------------- */
+
+
+
+        /* ----------------- */
+
+        /* make the gameObjects inactive */
+        go1.SetActive(false);
+        go2.SetActive(false);
+        go3.SetActive(false);
+        go4.SetActive(false);
+        foreach (GameObject go in go5)
+        {
+            go.SetActive(false);
+        }
     }
 
 }
