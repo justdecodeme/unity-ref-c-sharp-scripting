@@ -6,14 +6,24 @@ public class Arrays : MonoBehaviour
 {
     void Start()
     {
-        string[] family = new string[5];
-        family[0] = "Homer";
-        family[1] = "Marge";
-        family[2] = "Bart";
-        family[3] = "Lisa";
-        family[4] = "Maggie";        
+        /* elementType[] UniqueName = new elementType[numberOfElements]; */
+        /* elementType[] UniqueName = new elementType[numberOfElements] { _, _, _, ...}; */
+        /* elementType[] UniqueName = { _, _, _, ...}; */
 
-        Debug.Log(family);
-        Debug.Log(family[1]);
+        int[] topPlayerScores = new int[3];
+        topPlayerScores[0] = 0;
+
+        /* Longhand initializer */
+        // int[] topPlayerScores = new int[] { 713, 549, 984 };
+
+        /* Shortcut initializer */
+        // int[] topPlayerScores = { 713, 549, 984 };
+
+        /* get */
+        /* set */
+        /* add */
+        /* remove */
+        /* check */
+        /* length */
     }
 }

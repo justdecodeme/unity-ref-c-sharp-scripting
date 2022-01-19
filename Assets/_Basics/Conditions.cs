@@ -8,38 +8,49 @@ public class Conditions : MonoBehaviour
     {
         /* if */
         int temp = 40;
-        if (temp <= 32) {
+        if (temp <= 32)
+        {
             Debug.Log("It is freezing");
         }
 
         /* if else */
-        if (temp<=32) {
+        if (temp <= 32)
+        {
             Debug.Log("It is freezing");
-        } else if (temp<50) {
-            Debug.Log("Wear a jacket" ) ;
-        } else if (temp<70) {
+        }
+        else if (temp < 50)
+        {
+            Debug.Log("Wear a jacket");
+        }
+        else if (temp < 70)
+        {
             Debug.Log("Wear pants");
-        } else if (temp<90) {
+        }
+        else if (temp < 90)
+        {
             Debug.Log("Wear shorts");
-        } else {
+        }
+        else
+        {
             Debug.Log("Wear a bathing suit!");
         }
 
         /* switch */
         string weather = "cloudy";
-        switch (weather) {
+        switch (weather)
+        {
             case "sunny":
                 Debug.Log("'Wear suntan lotion");
-            break;
+                break;
             case "rainy":
                 Debug.Log("Bring an umbrella");
-            break;
+                break;
             case "snowing":
                 Debug.Log("Wear a warm jacket");
-            break;
+                break;
             default:
                 Debug.Log("Dress for success");
-            break;
+                break;
         }
     }
 }

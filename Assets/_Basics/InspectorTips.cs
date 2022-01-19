@@ -37,6 +37,5 @@ public class InspectorTips : MonoBehaviour
     /// </summary>
     private void SayHi()
     {
-        Debug.Log("Hi");
     }
 }
