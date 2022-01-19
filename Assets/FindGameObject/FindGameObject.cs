@@ -27,7 +27,6 @@ public class FindGameObject : MonoBehaviour
         /* ----------------- */
 
 
-
         /* ----------------- */
 
         /* make the gameObjects inactive */
