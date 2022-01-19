@@ -6,7 +6,7 @@ public class InspectorTips : MonoBehaviour
 {
     /* applying before and after header  */
     // [Space(20)]
-    
+
     [Header("GameObjects")] /* have space on top by default */
     public GameObject sword;
     public GameObject armor;
@@ -21,7 +21,22 @@ public class InspectorTips : MonoBehaviour
     public int force = 1;
 
     [Space(20)]
-    
+
     [TextArea]
     public string description = "This is description, can be multiline if required.";
+
+    void Start()
+    {
+        SayHi();
+    }
+
+    /// <summary>
+    /// This text will be 
+    /// visible when we 
+    /// hover on SayHi method call(s)
+    /// </summary>
+    private void SayHi()
+    {
+        Debug.Log("Hi");
+    }
 }
