@@ -9,7 +9,7 @@ public class BasicObjectSpawner : EditorWindow
     float objectScale;
     float spawnRadius = 5f;
 
-    [MenuItem("Tools/Basic Object Spawner")]
+    [MenuItem("My Tools/Basic Object Spawner")]
     public static void ShowWindow()
     {
         GetWindow(typeof(BasicObjectSpawner));      //GetWindow is a method inherited from the EditorWindow class
@@ -18,7 +18,7 @@ public class BasicObjectSpawner : EditorWindow
     private void OnGUI()
     {
         GUILayout.Label("Spawn New Object", EditorStyles.boldLabel);
-        
+
         objectBaseName = EditorGUILayout.TextField("Base Name", objectBaseName);
         objectID = EditorGUILayout.IntField("Object ID", objectID);
         objectScale = EditorGUILayout.Slider("Object Scale", objectScale, 0.5f, 3f);
@@ -33,12 +33,13 @@ public class BasicObjectSpawner : EditorWindow
 
     private void SpawnObject()
     {
-        if(objectToSpawn == null)
+        if (objectToSpawn == null)
         {
             Debug.LogError("Error: Please assign an object to be spawned.");
             return;
         }
-        if (objectBaseName == string.Empty) {
+        if (objectBaseName == string.Empty)
+        {
             Debug.LogError("Error: Please enter a base name for the object.");
             return;
         }
